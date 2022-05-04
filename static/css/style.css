@@ -9,8 +9,8 @@ header{
     position: fixed;
     top: 0px;
     width: 100%;
-    padding: 0px 10%;
-    z-index: 999;
+    padding: 0px 5%;
+    z-index: 9;
     font-size: 16px;
     border-bottom: 3px solid goldenrod;
     background-color: #000;
@@ -58,7 +58,6 @@ header #menu .nav-link{
     background-size: contain;
     background-position: right;
     border-bottom: 3px solid goldenrod;
-    z-index: -1;
 }
 
 #hero .blur{
@@ -67,9 +66,8 @@ header #menu .nav-link{
     left: 0px;
     right: 0px;
     bottom: 0px;
-    z-index: -1;
-    background-color: #0004;
-    background-image: linear-gradient(to right, #000000 45%, transparent);
+    background-color: #0002;
+    background-image: linear-gradient(to right, #000f 45%, transparent);
 }
 
 #hero .hero-content{
@@ -87,15 +85,15 @@ header #menu .nav-link{
     font-weight: 600;
 }
 
-#hero .hero-content p a{
-    padding: 15px;
+#hero .hero-content a{
+    padding: 15px 30px;
     border: 2px solid #fff;
     border-radius: 30px;
     margin-right: 20px;
-    transition: all 300ms;
 }
 
-#hero .hero-content p a:hover{
+#hero .hero-content a:hover{
+    cursor: pointer;
     padding: 15px;
     border: 2px solid goldenrod;
     background-color: goldenrod;
@@ -105,7 +103,7 @@ header #menu .nav-link{
 
 /******** Responsive Hero Section ********/
 
-@media all and (max-width: 768px) {
+@media all and (min-width: 577px) and (max-width: 768px) {
 
     #hero{
         width: 100%;
@@ -114,8 +112,8 @@ header #menu .nav-link{
     }
 
     #hero .blur{
-        background-color: #0004;
-        background-image: linear-gradient(to top, #000f 23%, transparent);
+        background-color: transparent;
+        background-image: linear-gradient(to top, #000f 10%, transparent);
     }
     
     #hero .hero-content{
@@ -125,10 +123,48 @@ header #menu .nav-link{
         justify-content: end;
         align-items: flex-end !important;
         margin-left: 0px;
+        padding-bottom: 20px;
     }
     
     #hero .hero-content img{
-        width: 200px;
+        width: 300px;
+    }
+    
+    #hero .hero-content p a{
+        padding: 10px 20px;
+    }
+
+    #hero .hero-content p a:hover{
+        padding: 10px 20px;
+    }
+
+}
+
+@media all and (max-width: 576px) {
+
+    #hero{
+        width: 100%;
+        height: 500px;
+        background-position: top;
+    }
+
+    #hero .blur{
+        background-color: #0001;
+        background-image: linear-gradient(to top, #000f 15%, transparent);
+    }
+    
+    #hero .hero-content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end !important;
+        margin-left: 0px;
+        padding-bottom: 10px;
+    }
+    
+    #hero .hero-content img{
+        width: 150px;
     }
     
     #hero .hero-content p a{
@@ -155,10 +191,18 @@ section{
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+@media all and (max-width: 768px){
+
+    section{
+        padding: 50px 0px;
+    }
+
+}
+
 .speech img{
     width: 100%;
     border-radius: 50%;
-    margin-top: 50px;
     box-shadow: 0px 20px 0px 5px goldenrod;
 }
 .about{
